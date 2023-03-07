@@ -1,0 +1,20 @@
+{
+  "name": "social-media-app-bootstrap",
+  "version": "1.0.0",
+  "description": "This repository is meant to show the disadvantages of creating such an App with VanillaJS instead of some Frontend Framework like React.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slack-Attack-10/Social-Media-App-Bootstrap.git"
+  },
+  "keywords": [],
+  "author": "Andreas Ohligschläger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slack-Attack-10/Social-Media-App-Bootstrap/issues"
+  },
+  "homepage": "https://github.com/Slack-Attack-10/Social-Media-App-Bootstrap#readme"
+}
