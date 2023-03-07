@@ -23,35 +23,16 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2">
-          <div id="chat-box">
-            <div class="chat-header">
-              <span>Chat</span>
-              <button id="minimize-chat-button" class="chat-action-button">
-                -
-              </button>
-            </div>
-            <div id="chat-content">
-              <!-- Chat messages will be added here -->
-            </div>
-            <div class="chat-footer">
-              <input
-                type="text"
-                id="search-input"
-                placeholder="Search for users..."
-              />
-              <button id="search-button" class="chat-action-button">
-                Search
-              </button>
-            </div>
-          </div>
           <div class="card mb-3">
             <div id="sidebar-left" class="navigation-container"></div>
           </div> 
         </div>
         <div class="col-md-7">
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">What's on your mind?</h5>
+          <div  class="card mb-3">
+            <div id="posting-section" class="card-body">
+              <div id="profile-picture-container-newsfeed">
+                <!-- Profile Picture will be added here -->
+              </div>
               <form>
                 <div class="form-group">
                   <textarea
@@ -59,7 +40,7 @@
                     placeholder="Type here"
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Post</button>
+                <button id ="post__btn" type="submit" class="btn btn-primary">Post</button>
               </form>
             </div>
           </div>
@@ -70,6 +51,27 @@
                 <!-- news feed items will be dynamically added here -->
               </ul>
             </div>
+          </div>
+        </div>
+        <div id="chat-box">
+          <div class="chat-header">
+            <span>Chat</span>
+            <button id="minimize-chat-button" class="chat-action-button">
+              -
+            </button>
+          </div>
+          <div id="chat-content">
+            <!-- Chat messages will be added here -->
+          </div>
+          <div class="chat-footer">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for users..."
+            />
+            <button id="search-button" class="chat-action-button">
+              Search
+            </button>
           </div>
         </div>
       </div>
@@ -108,17 +110,17 @@
         {
           name: "Jane Doe",
           email: "jane.doe@example.com",
-          image: "https://via.placeholder.com/50",
+          image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&q=80",
         },
         {
           name: "Bob Johnson",
           email: "bob.johnson@example.com",
-          image: "https://via.placeholder.com/50",
+          image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&q=80",
         },
         {
           name: "Mary Lee",
           email: "mary.lee@example.com",
-          image: "https://via.placeholder.com/90",
+          image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=50&q=60",
         },
         {
           name: "John Smith",
@@ -127,7 +129,19 @@
         },
       ];
 
-      // Display all users in the chat
+      const loggedInUser = {
+          name: "Benito Camela",
+          email: "benito.camela@example.com",
+          image: "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80",      
+      };
+
+      // Display loggedInUser Image
+      const profilePictureNewsFeed = document.getElementById("profile-picture-container-newsfeed");
+      const image = `<img src="${loggedInUser.image}" id="profile-picture-newsfeed">`;
+      profilePictureNewsFeed.innerHTML = image;
+      // profilePictureNewsFeed.appendChild(image);
+
+      // Display users in the chat
       const chatContent = document.getElementById("chat-content");
       users.forEach((user) => {
         const message = document.createElement("div");
@@ -150,6 +164,7 @@
             user.name.toLowerCase().includes(searchText) ||
             user.email.toLowerCase().includes(searchText)
         );
+
         // Display search results in the chat content
         chatContent.innerHTML = "";
         searchResults.forEach((user) => {
