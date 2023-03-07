@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="navigation" class="navigation-container">
+        <!-- This will include the navigation bar -->
+        <!-- The path to the navigation.html file may vary depending on your project structure -->
+        <!-- Make sure to use the correct relative path to the navigation.html file -->
+        <!-- For example, if the navigation.html file is in the same directory as your HTML file, the path would be "./navigation.html" -->
+        <!-- If the navigation.html file is in a parent directory, the path would be "../navigation.html" -->
+      </div>
+    <div class="container">
+      <h1>Marketplace</h1>
+      <p>Latest products</p>
+      <div id="product-list" class="row">
+        <!-- products will be dynamically added here -->
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        fetch('./navigation.html')
+          .then(response => response.text())
+          .then(data => {
+          const navigationContainer = document.getElementById('navigation');
+          navigationContainer.innerHTML = data;
+          });
+      </script>
+  </body>
+</html>

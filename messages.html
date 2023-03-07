@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+  <title>Messages</title>
+</head>
+<body>
+    <div id="navigation" class="navigation-container">
+        <!-- This will include the navigation bar -->
+        <!-- The path to the navigation.html file may vary depending on your project structure -->
+        <!-- Make sure to use the correct relative path to the navigation.html file -->
+        <!-- For example, if the navigation.html file is in the same directory as your HTML file, the path would be "./navigation.html" -->
+        <!-- If the navigation.html file is in a parent directory, the path would be "../navigation.html" -->
+      </div>
+  <!-- Main content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Sidebar -->
+        <div class="card">
+          <div class="card-header">
+            Search Users
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="search-input">Search:</label>
+                <input type="text" class="form-control" id="search-input">
+              </div>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+          </div>
+          <div class="card-header">
+            Chats
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Alice</li>
+            <li class="list-group-item">Bob</li>
+            <li class="list-group-item">Charlie</li>
+            <li class="list-group-item">David</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- Messages -->
+        <div class="card">
+          <div class="card-header">
+            Alice
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Hello, how are you?</li>
+            <li class="list-group-item">I'm doing well, thanks! How about you?</li>
+            <li class="list-group-item">Pretty good, thanks for asking.</li>
+            <li class="list-group-item">That's great to hear!</li>
+          </ul>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="message-input">Message:</label>
+                <input type="text" class="form-control" id="message-input">
+              </div>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Optional: Jquery & Popper -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script> -->
+<script>
+    // This code is used to include the HTML code from navigation.html into the current HTML file
+    fetch("./navigation.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navigationContainer = document.getElementById("navigation");
+          navigationContainer.innerHTML = data;
+        });
+</script>
+</body>
+</html>
