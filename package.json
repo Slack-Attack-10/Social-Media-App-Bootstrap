@@ -4,7 +4,8 @@
   "description": "This repository is meant to show the disadvantages of creating such an App with VanillaJS instead of some Frontend Framework like React.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/styles.scss css/styles.css -w"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Slack-Attack-10/Social-Media-App-Bootstrap/issues"
   },
-  "homepage": "https://github.com/Slack-Attack-10/Social-Media-App-Bootstrap#readme"
+  "homepage": "https://github.com/Slack-Attack-10/Social-Media-App-Bootstrap#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
 }
