@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Feed</title>
     <link
       rel="stylesheet"
@@ -8,7 +11,7 @@
     />
     <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div id="navigation" class="navigation-container">
@@ -18,7 +21,6 @@
       <!-- For example, if the navigation.html file is in the same directory as your HTML file, the path would be "./navigation.html" -->
       <!-- If the navigation.html file is in a parent directory, the path would be "../navigation.html" -->
       <!-- You can also use an absolute path if needed -->
-      <!-- <div class="navigation-container" w3-include-html="./navigation.html"></div> -->
     </div>
     <div class="container-fluid">
       <div class="row">
@@ -53,25 +55,27 @@
             </div>
           </div>
         </div>
-        <div id="chat-box">
-          <div class="chat-header">
-            <span>Chat</span>
-            <button id="minimize-chat-button" class="chat-action-button">
-              -
-            </button>
-          </div>
-          <div id="chat-content">
-            <!-- Chat messages will be added here -->
-          </div>
-          <div class="chat-footer">
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Search for users..."
-            />
-            <button id="search-button" class="chat-action-button">
-              Search
-            </button>
+        <div class="col-md-3">
+          <div id="chat-box">
+            <div class="chat-header">
+              <span>Chat</span>
+              <button id="minimize-chat-button" class="chat-action-button">
+                -
+              </button>
+            </div>
+            <div id="chat-content">
+              <!-- Chat messages will be added here -->
+            </div>
+            <div class="chat-footer">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search for users..."
+              />
+              <button id="search-button" class="chat-action-button">
+                Search
+              </button>
+            </div>
           </div>
         </div>
       </div>

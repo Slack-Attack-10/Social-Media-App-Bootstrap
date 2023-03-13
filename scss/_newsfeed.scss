@@ -1,0 +1,15 @@
+#posting-section {
+    display: flex;
+}
+
+#posting-section form {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    flex-basis: auto;
+    flex-shrink: 1;
+}
+
+#post__btn {
+    width: 20%;
+}

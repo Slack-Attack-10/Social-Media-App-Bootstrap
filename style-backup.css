@@ -1,7 +1,7 @@
 /* Center the text in the container */
 .container {
     text-align: center;
-  }
+}
   
   /* Add some margin to the product cards */
   .card {
@@ -298,4 +298,36 @@
 
 .recommendations li {
   margin-bottom: 10px;
+}
+/* Social Media */
+
+.social-media {
+  padding: 20px;
+}
+
+.social-media h3 {
+  margin-bottom: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media li {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  background-color: #3e8e41;
 }

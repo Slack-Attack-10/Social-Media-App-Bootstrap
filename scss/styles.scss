@@ -1,0 +1,31 @@
+@use 'sidebar-left.scss';
+@use 'chat.scss';
+@use 'profile.scss';
+@use 'newsfeed.scss';
+
+
+/* Center the text in the container */
+.container {
+    text-align: center;
+  }
+  
+  /* Add some margin to the product cards */
+  .card {
+    margin: 10px;
+  }
+  
+  #menu_icon {
+    width: 50px;
+  }
+  
+  .fa-solid {
+    align-self: center;
+  }
+  
+  .round {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
