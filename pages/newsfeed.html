@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Feed</title>
+    <link rel="stylesheet" href="../assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="newsfeed.js"></script>
+    <style>
+      body{
+        background-color: #8e9a15;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navigation" class="navigation-container">
+      <!-- This will include the navigation bar -->
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-md-2">
+          <div class="card mb-3">
+            <div id="sidebar-left" class="navigation-container"></div>
+          </div> 
+        </div> -->
+        <div class="col-md-12">
+          <div  class="card mb-3">
+            <div id="posting-section" class="card-body">
+              <div id="profile-picture-container-newsfeed">
+                <!-- Profile Picture will be added here -->
+              </div>
+              <form>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    placeholder="Type here"
+                  ></textarea>
+                </div>
+                <button id ="post__btn" type="submit" class="btn btn-primary">Post</button>
+              </form>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">News Feed</h5>
+              <ul id="news-feed" class="list-group">
+                <!-- news feed items will be dynamically added here -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="chat-box">
+            <div class="chat-header">
+              <span>Chat</span>
+              <button id="minimize-chat-button" class="chat-action-button">
+                -
+              </button>
+            </div>
+            <div id="chat-content">
+              <!-- Chat messages will be added here -->
+            </div>
+            <div class="chat-footer">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search for users..."
+              />
+              <button id="search-button" class="chat-action-button">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
