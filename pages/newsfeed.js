@@ -125,25 +125,25 @@ const newsFeedItems = [
 }
 ];
 
-// // Function to display the news feed items
-// function displayNewsFeedItems() {
-// const newsFeed = document.getElementById("news-feed");
-// newsFeed.innerHTML = "";
-// newsFeedItems.forEach(item => {
-//   const newsFeedItem = `
-//     <div class="card mb-3">
-//       <div class="card-body">
-//         <h5 class="card-title">${item.title}</h5>
-//         <h6 class="card-subtitle mb-2 text-muted">${item.author}</h6>
-//         <p class="card-text">${item.content}</p>
-//         <p class="card-text"><small class="text-muted">${item.date}</small></p>
-//       </div>
-//     </div>
-//   `;
-//   newsFeed.insertAdjacentHTML("beforeend", newsFeedItem);
-// });
-// }
+// Function to display the news feed items
+function displayNewsFeedItems() {
+const newsFeed = document.getElementById("news-feed");
+newsFeed.innerHTML = "";
+newsFeedItems.forEach(item => {
+  const newsFeedItem = `
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">${item.title}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${item.author}</h6>
+        <p class="card-text">${item.content}</p>
+        <p class="card-text"><small class="text-muted">${item.date}</small></p>
+      </div>
+    </div>
+  `;
+  newsFeed.insertAdjacentHTML("beforeend", newsFeedItem);
+});
+}
 
-// // Display the news feed items when the page loads  
-// window.addEventListener("load", displayNewsFeedItems);
+// Display the news feed items when the page loads  
+window.addEventListener("load", displayNewsFeedItems);
 window.addEventListener("load", displayLoggedInUser);
